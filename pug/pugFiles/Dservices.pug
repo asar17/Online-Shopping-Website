@@ -1,0 +1,15 @@
+
+div.services
+ 
+ div.container
+  div.head-with-border 
+   h2  Our Services
+   -var infos={'Testing TitleOne':[{'fa fa-home':'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum'}],'Testing TitleTwo':[{'fa fa-users':'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum'}],'Testing TitleThree':[{'fa fa-cogs':'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum'}]} 
+  div(class="flex flex-col justify-start items-center  lg:flex-row gap-6 ") 
+   each info in Object.keys(infos)
+    each val,index in infos[info][0]
+     div.services-box(class="flex flex-col",style="width:550px") 
+      h3.services-title=info
+       i(class=index)
+      p.services-desc=val 
+      a.services-link(href="#") Read More..  
