@@ -1,0 +1,19 @@
+include ../mixin/mixin.pug
+doctype html
+html
+ head
+  meta(charset="utf-8")
+  title PugSassProject
+  link(rel="stylesheet",href="css/home.css")/
+  link(rel="stylesheet",href="css/normalise.css")/
+  link(rel="stylesheet",href="css/all.min.css")/
+
+ body
+  div.header
+    div.container(class="hidden md:flex md:flex-row ")
+      div.logo(class="flex flex-col flex-auto  justify-center items-center")
+        h1 Composition
+        p Free Psd Website Template
+      ul.navbar(class="flex flex-row")
+        +li('Homepage','Style Demo','Full Width','Dropdown','Link Text')
+

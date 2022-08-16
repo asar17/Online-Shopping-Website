@@ -1,0 +1,14 @@
+div(class="clear")
+div.our-players
+   div.container
+     div.head-with-border
+      h2 our palyers
+     -var infos={'one':[{'one':'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum'}],'two':[{'two':'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum'}],'three':[{'three':'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum'}],'four':[{'four':'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum'}],'five':[{'five':'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum'}]}
+     div(class="flex flex-col justify-center items-center lg:flex-row gap-4 ")
+      each info in Object.keys(infos)
+       div.player-box(style="width:550px")
+        img(src='image/'+info+'.jpg',class="rounded-full mx-auto",width="300px",heigth="300px")/
+        each val,index in infos[info][0]
+         h3.player-title #[span #{index}] test name
+         p.player-desc=val  
+         a(href="#").player-link Read More

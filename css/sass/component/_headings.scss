@@ -1,0 +1,25 @@
+.head-with-border{
+    position:relative;
+   h2{
+    width:300px;
+    background-color:#{$mainColor};
+    color:white;
+    text-align:center;
+    @include prefixer(border-radius,15px,webkit moz o ms);
+    margin:40px auto;
+    padding:10px 15px;
+    text-transform:uppercase;
+    
+    &:before{
+        width: 100%;
+        height:2px;
+        content:'';
+        background-color:gray;
+        position:absolute;
+        left:0;
+        top:50%;
+        z-index:-1;
+    }
+   }
+
+}

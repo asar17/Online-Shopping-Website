@@ -1,0 +1,12 @@
+div.gallery(class="")
+     div(class="lg:ml-20 xl:ml-0")
+      h3.footer-title(class="flex justify-end justify-center md:ml-20 xl:ml-0 mx-auto text-center mt-8",style="font-size:30px;width:600px") Latest From Blog 
+     -var info3={'one':[{'lorem TitleOne':'Lorem ipsum, or lipsum as it is sometimes known, dummy text used in laying out , graphic or web desigs. The passage is'}],'two':[{'lorem TitleTwo':'Lorem ipsum, or lipsum as it is sometimes known,dummy text used in laying out , graphic <br>web designs. The passage is'}]}
+     each  info in Object.keys(info3)
+      div.gallery-box(style="width:550px",class="overflow-x-hidden")
+       div.img-box
+        img(src='image/footer/'+info+'.jpg')/
+        div.gallery-box-text
+         each val,index in info3[info][0]
+          h4=index
+          p=val

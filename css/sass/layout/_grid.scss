@@ -1,0 +1,22 @@
+*{
+    @include prefixer(box-sizing,border-box,webkit moz o ms)
+}
+.container{
+    width:#{$containerWidth};
+    margin:auto;
+    padding-left:#{$containerPaddingLeft};
+    padding-right:#{$containerPaddingRight};
+    position:relative;
+    @include mediaMax(798px){
+        width:auto;
+    }
+    @include mediaMin(798){
+        width:750px;
+    }
+    @include mediaMin(992){
+        width:970px;
+    }
+    @include mediaMin(1200){
+        width:1170px;
+    }
+}

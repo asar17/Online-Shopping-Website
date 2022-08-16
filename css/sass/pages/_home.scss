@@ -1,0 +1,112 @@
+.slider{
+    q{
+        font: {
+            size:23px;
+            style:italic;
+            weight:bold;
+        }
+        line-height:2;
+        text-align:center;
+        color:gray;
+        width:80%;
+        position:absolute;
+       
+    }
+    img{
+        width:100%;
+        margin-top:100px;
+        height:600px;
+    }
+    .bullets{
+        text-align:center;
+        li{
+            width:20px;
+            height:20px;
+            @include prefixer(border-radius,50%,webkit mos o ms);
+            background-color:gray;
+            display:inline-block;
+            &:hover{
+                border:3px solid #4fdcf5;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.services{
+    .services-box{
+        float:left;
+        width:calc(100%/3);
+        &:not(:last-of-type){
+            padding-right:20px;
+        } 
+    }
+    .services-title{
+        font: {
+            style:italic;
+            size:20px;
+        }
+        color:rgb(63, 59, 59);
+        position:relative;
+        i{
+            color:#{$mainColor};
+            font-size:30px;
+            margin-left:5px;
+            top:-5px;
+            position:absolute;
+        }
+    }
+    .services-desc{
+        color:gray;
+    }
+    .services-link{
+        color:#{$mainColor};
+        text-decoration:none;
+    }
+}
+.our-players{
+    .player-box{
+        width:(100%/5);
+        float:left;
+        img{
+            max-width:100%;
+            height:300px;
+            padding-left:30px;
+        }
+        .player-title {
+            font: {
+                style:italic;
+                size:20px;
+            }
+           color:gray;
+           span{
+            font-size:35px;
+            color:#{$mainColor};
+            padding-left:30px;
+           }
+        }
+        .player-desc{
+            color:gray;
+            padding-left:30px;
+
+        }
+        .player-link{
+            color:#{$mainColor};
+            text-decoration:none;
+            padding-left:30px;
+        }
+    }
+   
+}
+.lorem{
+    .lorem-box{
+        
+        width:(100%/3);
+        float:left;
+        img{
+            width:100%;
+            height:300px;
+            padding-left:15px;
+        }
+    }
+}
